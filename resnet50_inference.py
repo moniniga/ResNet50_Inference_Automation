@@ -19,7 +19,7 @@ transforms = T.Compose([
     T.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
 
-dataset = torchvision.datasets.ImageFolder(root="/home/datasets/VisionDatasets/imagenet/val", transform=transforms)
+dataset = torchvision.datasets.ImageFolder(root="/home/datasets/imagenet/val", transform=transforms)
 data_loader = DataLoader(dataset,batch_size=32, shuffle=False, num_workers=32)
 
 top1_correct_pred = 0
